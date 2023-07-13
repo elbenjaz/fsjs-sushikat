@@ -1,0 +1,148 @@
+@import url('https://fonts.cdnfonts.com/css/happiness-sans-symbol');
+@import url('https://fonts.cdnfonts.com/css/reenie-beanie');
+                
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg.jpg");
+    filter: grayscale(1);
+    z-index: -1;
+}
+
+nav {
+    background-color: #fa6334;
+    border: 2px #000 solid;
+}
+nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Happiness Sans', sans-serif;
+    font-size: 40px;
+    width: 250px;
+    background-color: #fff;
+    border: 2px black solid;
+    padding: 2px;
+}
+nav h1 img {
+    width: 50px;
+}
+nav img {
+    width: 75px;
+    border-radius: 100%;
+}
+
+textarea {
+    border: 0 !important;
+}
+
+.handwritten {
+    font-family: 'Reenie Beanie', sans-serif !important;
+    font-size: 35px !important;
+    line-height: 40px !important;
+}
+
+#orders {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    place-items: center;
+    align-items: start;
+}
+@media (min-width: 576px) {
+    nav img {
+        width: 150px;
+    }
+    #orders {
+        grid-template-columns: repeat(2, 1fr);        
+    }
+}
+@media (min-width: 768px) {
+    #orders {
+        grid-template-columns: repeat(2, 1fr);        
+    }
+}
+@media (min-width: 992px) {
+    #orders {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    #orders {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1400px) {
+    #orders {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.order {
+    padding: 10px;
+    box-shadow: 0px 0px 15px 3px #fa6334;
+    color: #000;
+    width: 240px;
+    word-wrap: break-word;
+    border: 2px #000 solid;
+}
+.order .orders-delete {
+    background: transparent;
+    border: 0;
+    color: #000;
+}
+.order .orders-delete:hover {
+    color:#fa6334;    
+}
+.order label,
+.order input {
+    cursor: pointer;
+}
+.order.orders-completed p {
+    text-decoration: line-through;
+}
+.order.yellow {
+    background: #fff3cd;
+    transform: rotate(-4deg);
+}
+.order.green {
+    transform: rotate(4deg);
+    background: #cfc;
+}
+.order.purple {
+    transform: rotate(-4deg);
+    background: #ccf;
+}
+.order.blue {
+    transform: rotate(4deg);
+    background-color: #cff4fc;
+}
+
+.dialog {
+    position: relative;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+}
+.dialog:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+}
+.dialog.dialog-left:before {
+    right: -20px;
+    border-color: transparent transparent transparent #fff;
+}
+.dialog.dialog-right:before {
+    left: -20px;
+    border-color: transparent #fff transparent transparent;
+}
