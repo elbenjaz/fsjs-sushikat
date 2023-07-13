@@ -1,6 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/happiness-sans-symbol');
 @import url('https://fonts.cdnfonts.com/css/reenie-beanie');
-                
+              
+body {
+    position: relative;
+}
 body::before {
     content: "";
     position: fixed;
